@@ -1,0 +1,81 @@
+/* Certification container */
+.certifications-container {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Gap between certification cards */
+  }
+  
+  /* Certification card */
+/* Certification card */
+/* Certification card */
+.certification-card {
+    height: 300px;
+    width: calc(25% - 20px); /* Adjusted width considering the gap */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow-y: scroll; /* Add overflow scrolling */
+    background-color: #f9f9f9; /* Light background color */
+    transform: translateZ(0); /* Enable hardware acceleration for smoother animations */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+  }
+  
+  /* Hide the scrollbar */
+  .certification-card::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .certification-card:hover {
+    transform: translateZ(10px); /* Add depth effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for 3D effect */
+  }
+  
+  /* Certification header */
+  .certification-header {
+    height: 80px;
+    padding: 20px;
+    background-color: #007bff; /* Blue header background */
+    color: white; /* White text color */
+  }
+  
+  .certification-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Certification details */
+  .certification-details {
+    padding: 20px;
+  }
+  
+  .certification-detail {
+    margin-bottom: 10px;
+  }
+  
+  .certification-detail strong {
+    font-weight: bold;
+  }
+  
+  .certification-detail a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .certification-detail a:hover {
+    text-decoration: underline;
+  }
+  /* Media query for tablets and larger devices */
+@media (max-width: 991px) {
+    .certification-card {
+      width: calc(33.3333% - 20px); /* Adjusted width for tablets */
+    }
+  }
+  
+  /* Media query for smaller devices (e.g., smartphones) */
+  @media (max-width: 767px) {
+    .certification-card {
+      width: calc(50% - 20px); /* Adjusted width for smaller devices */
+    }
+  }

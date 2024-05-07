@@ -1,0 +1,11 @@
+.social-icon {
+    color: #333; /* Set default color */
+    font-size: 24px; /* Set default font size */
+    transition: all 0.3s ease-in-out; /* Add transition for smooth hover effect */
+  }
+  
+  .social-icon:hover {
+    color: #007bff; /* Change color on hover */
+    transform: translateY(-3px); /* Add slight lift effect */
+  }
+  

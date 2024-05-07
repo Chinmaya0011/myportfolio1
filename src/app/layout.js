@@ -1,7 +1,8 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from './components/theme.js';
 
-const inter = Inter({ subsets: ["latin"] });
+// Assuming you are using Inter font from Google Fonts elsewhere,
+// you might want to include it in your CSS file or link it in your HTML head.
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +11,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ThemeProvider>
+      <html lang="en">
+        <head>
+          {/* Include Inter font here if needed */}
+        </head>
+        <body>{children}</body>
+      </html>
+    </ThemeProvider>
   );
 }

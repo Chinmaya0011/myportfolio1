@@ -1,0 +1,79 @@
+/* Default styles */
+.custom-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Horizontally centered */
+
+}
+
+.custom-skill-item {
+  width: calc(20% - 20px); /* Set your desired width with margin */
+  margin: 5px 10px; /* Set margin around each item */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(191, 177, 177, 0.387);
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+  
+  .custom-skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-skill-item-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .custom-skill-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-skill-icon-container {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .custom-skill-item-icon {
+    font-size: 24px;
+  }
+  
+  .custom-skill-name-container {
+    text-align: center;
+  }
+  
+  .custom-skill-item-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Media queries for smaller screens */
+  @media screen and (max-width: 768px) {
+    .custom-skills-container {
+      width: 100%; /* Adjust width for smaller screens */
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+    
+    .custom-skill-item {
+      width: calc(50% - 20px); /* Two items per row with spacing */
+      margin: 10px;
+    }
+  }
+  
+  /* Media queries for even smaller screens */
+  @media screen and (max-width: 480px) {
+    .custom-skill-item {
+      width: calc(100% - 20px); /* One item per row with spacing */
+    }
+  }
+  
