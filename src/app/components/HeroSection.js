@@ -48,7 +48,7 @@ const HeroSection = () => {
 
         <div className={`text-center ${isDarkMode ? 'text-white' : ''}`}>
           <h1 className="justify-center flex text-4xl font-bold">
-            I'm a Web <p className='ml-4'> {profession}</p>
+            I&apos;m a Web <p className='ml-4'> {profession}</p>
           </h1>
           <p className="text-xl mt-4">
             Building beautiful and functional web experiences.
