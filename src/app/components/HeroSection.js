@@ -8,7 +8,6 @@ import { useTheme } from './theme.js'; // Adjust the path as needed
 const HeroSection = () => {
   const [profession, setProfession] = useState('Web Developer');
   const { isDarkMode } = useTheme();
-  const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,21 +16,8 @@ const HeroSection = () => {
       );
     }, 2000);
 
-    // Set the initial width after the component mounts
-    setWindowWidth(window.innerWidth);
-
-    // Event listener to update width on resize
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('resize', handleResize);
-    };
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
