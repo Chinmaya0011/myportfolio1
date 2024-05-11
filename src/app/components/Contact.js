@@ -59,7 +59,7 @@ const Contact = () => {
       </div>
       <div className="contact-form">
         {successMsg ? (
-          <div className="message-sent justify-center text-center">
+          <div className="message-sent justify-center text-center min-h-full">
             <BiCheck className="right-mark-logo text-green-500 text-5xl mb-4 justify-center text-center" /> {/* Using BiCheck icon as the right logo */}
             <p className="message">Message sent successfully. Thank you!</p>
           </div>

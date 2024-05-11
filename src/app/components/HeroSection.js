@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import photo from '../../../public/dp.jpg';
+import photo from '../../../public/dp.png';
 import { FaGithub, FaLinkedin, FaTwitter, FaHackerrank } from 'react-icons/fa';
 import { useTheme } from './theme.js'; // Adjust the path as needed
 
@@ -58,7 +58,7 @@ const HeroSection = () => {
               href="#projects"
               className={`px-4 py-2 rounded-md ${isDarkMode ? 'bg-blue-500' : 'bg-blue-500'} text-white hover:bg-blue-700`}
             >
-              See My Projects
+              My Resume
             </a>
           </div>
           <div className="flex mt-4 space-x-4 justify-center text-center">

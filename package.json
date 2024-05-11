@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@octokit/graphql": "^8.1.1",
+    "axios": "^1.6.8",
     "emailjs-com": "^3.2.0",
     "flickity": "^2.3.0",
     "next": "14.2.3",
     "react": "^18",
+    "react-calendar-heatmap": "^1.9.0",
     "react-dom": "^18",
     "react-flickity-component": "^4.0.7",
     "react-icons": "^5.2.0",

@@ -1,0 +1,80 @@
+.github-portfolio {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center all items */
+  }
+  
+  .user-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .avatar-container {
+    
+    /* Center the avatar horizontally */
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+     display: flex;
+    justify-content: center;
+  }
+  
+  .bio {
+    margin-bottom: 20px;
+  }
+  
+  .bio-heading {
+    font-size: 18px;
+  }
+  
+  .bio-content {
+    margin-top: 10px;
+  }
+  
+  .repo-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .repo-list {
+    list-style: none;
+    padding: 0;
+    max-height: 500px; /* Set max height for repository list */
+    overflow-y: auto; /* Enable vertical scroll */
+  }
+  
+  .repo-item {
+    margin-bottom: 10px;
+  }
+  
+  .repo-card {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Add transition for animation */
+  }
+  
+  .repo-card:hover {
+    transform: translateY(-5px); /* Add 3D hover effect */
+  }
+  
+  .repo-link {
+    text-decoration: none;
+    color: #0366d6; /* GitHub link color */
+  }
+  
+  .repo-link:hover {
+    text-decoration: underline;
+  }
+  
+  .repo-fullname {
+    color: #586069; /* GitHub meta information color */
+  }
+  
