@@ -1,18 +1,21 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from './theme.js';
 
 const AboutMe = () => {
   const { isDarkMode } = useTheme();
-  const [width, setWidth] = useState(window.innerWidth);
+  const [containerWidth, setContainerWidth] = useState(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setWidth(window.innerWidth);
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
     };
 
     // Set the initial width after the component mounts
-    setWidth(window.innerWidth);
+    handleResize();
 
     // Add event listener to update width on resize
     window.addEventListener('resize', handleResize);
@@ -25,7 +28,7 @@ const AboutMe = () => {
 
   return (
     <div className={`section1 hero min-h-screen flex flex-col justify-center items-center px-4 ${isDarkMode ? 'dark' : ''}`}>
-      <div style={{ width: width >= 568 ? '60%' : '90%' }} className='justify-center items-center px-4 text-center'>
+      <div ref={containerRef} className='justify-center items-center px-4 text-center' style={{ width: containerWidth ? (containerWidth >= 568 ? '60%' : '90%') : 'auto' }}>
         <h1 className={`text-3xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>CHINMAYA KUMAR MISHRA</h1>
         <p className={`text-lg mb-4 ${isDarkMode ? 'text-gray-300' : ''}`}>Full-Stack Web Developer</p>
         <p className={`mb-4 ${isDarkMode ? 'text-gray-300' : ''}`}>imchinu17@gmail.com | 7077835119 | Bhubaneswar, Odisha</p>
