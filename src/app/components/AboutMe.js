@@ -1,13 +1,31 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from './theme.js';
 
 const AboutMe = () => {
   const { isDarkMode } = useTheme();
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    // Set the initial width after the component mounts
+    setWidth(window.innerWidth);
+
+    // Add event listener to update width on resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className={`section1 hero min-h-screen flex flex-col justify-center items-center px-4 ${isDarkMode ? 'dark' : ''}`}>
-      <div style={{ width: window.innerWidth >= 568 ? '60%' : '90%' }} className='justify-center items-center px-4 text-center'>
+      <div style={{ width: width >= 568 ? '60%' : '90%' }} className='justify-center items-center px-4 text-center'>
         <h1 className={`text-3xl font-bold mb-4 ${isDarkMode ? 'text-white' : ''}`}>CHINMAYA KUMAR MISHRA</h1>
         <p className={`text-lg mb-4 ${isDarkMode ? 'text-gray-300' : ''}`}>Full-Stack Web Developer</p>
         <p className={`mb-4 ${isDarkMode ? 'text-gray-300' : ''}`}>imchinu17@gmail.com | 7077835119 | Bhubaneswar, Odisha</p>
