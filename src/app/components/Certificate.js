@@ -1,5 +1,6 @@
 import React from 'react';
-import "../style/Certificate.css"
+import "../style/Certificate.css";
+
 const Certifications = () => {
   const certifications = [
     {
@@ -70,24 +71,26 @@ const Certifications = () => {
 
   return (
     <div className="certifications-container">
-    {certifications.map((certification, index) => (
-      <div className="certification-card" key={index}>
-        <div className="certification-header">
-          {/* Logo will be added here */}
-          <div className="certification-title">{certification.title}</div>
+      {certifications.map((certification, index) => (
+        <div className="certification-card" key={index}>
+          <div className="certification-header">
+            {/* Logo will be added here */}
+            <div className="certification-title">{certification.title}</div>
+          </div>
+          <div className="certification-details">
+            <div className="certification-detail"><strong>Organization:</strong> {certification.organization}</div>
+            <div className="certification-detail"><strong>Date Issued:</strong> {certification.dateIssued}</div>
+            <div className="certification-detail"><strong>Credential ID:</strong> {certification.credentialID}</div>
+            <div className="certification-detail"><strong>Skills:</strong> {certification.skills}</div>
+            {certification.verificationLink && (
+              <div className="certification-detail">
+                <a href={certification.verificationLink} target="_blank" rel="noopener noreferrer">Show credential</a>
+              </div>
+            )}
+          </div>
         </div>
-        <div className="certification-details">
-          <div className="certification-detail"><strong>Organization:</strong> {certification.organization}</div>
-          <div className="certification-detail"><strong>Date Issued:</strong> {certification.dateIssued}</div>
-          <div className="certification-detail"><strong>Credential ID:</strong> {certification.credentialID}</div>
-          <div className="certification-detail"><strong>Skills:</strong> {certification.skills}</div>
-          {certification.verificationLink && (
-            <div className="certification-detail"><a href={certification.verificationLink} target="_blank" rel="noopener noreferrer">Show credential</a></div>
-          )}
-        </div>
-      </div>
-    ))}
-  </div>
+      ))}
+    </div>
   );
 };
 
