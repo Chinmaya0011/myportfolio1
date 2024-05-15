@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
-import '../style/Eaducation.css'; // Import CSS for hover effect
-import { useTheme } from './theme.js'; // Adjust the path as needed
+import { useTheme } from './theme'; // Adjust the path as needed
+import '../style/Education.css'; // Adjust the path as needed
 
 const Education = () => {
   const { isDarkMode } = useTheme();
@@ -26,4 +26,5 @@ const Education = () => {
 };
 
 export default Education;
+
 
